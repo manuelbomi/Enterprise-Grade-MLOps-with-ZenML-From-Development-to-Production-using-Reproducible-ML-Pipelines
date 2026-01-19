@@ -242,7 +242,7 @@ with mlflow.start_run():
 
 - Can CI/CD run it?
 
-#### Comparison Table
+#### <ins>Comparison Tables</ins>
 
 #### MLOps Platform Comparison: MLflow vs ZenML
 
