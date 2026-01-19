@@ -43,3 +43,19 @@ model = train(data)
 accuracy = evaluate(model)
 save(model)
 ```
+
+This works once, on your laptop, for experiments.
+
+##### But in real systems, you need to answer:
+
+- Which exact data produced this model?
+
+- Can I reproduce this run next month?
+
+- Can this run on Kubernetes instead of my laptop?
+
+- How do I deploy only if metrics pass?
+
+- How does CI/CD retrain and redeploy models?
+
+**These problems define MLOps.**
