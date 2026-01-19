@@ -1,2 +1,1 @@
-# Enterprise-Grade MLOps with ZenML
-#### From Development to Production using Reproducible ML Pipelines
+# Enterprise-Grade MLOps with ZenML<sub>fFrom Development to Production using Reproducible ML Pipelines</sub>
