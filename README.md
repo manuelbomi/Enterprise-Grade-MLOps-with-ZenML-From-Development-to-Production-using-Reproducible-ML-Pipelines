@@ -1,4 +1,4 @@
-# Enterprise-Grade MLOps with ZenML: <sub>from Development to Production using Reproducible ML Pipelines</sub>
+# Enterprise-Grade MLOps with ZenML : <sub>from Development to Production using Reproducible ML Pipelines</sub>
 
 ### Why this repository exists
 
@@ -25,3 +25,8 @@
 - CI/CD integration
 
 - Infrastructure abstraction
+
+---
+<ins>One-sentence definition</ins>
+
+*ZenML is an MLOps framework that turns ML code into versioned, reproducible, deployable pipelines that can run consistently across development and production environments.*
