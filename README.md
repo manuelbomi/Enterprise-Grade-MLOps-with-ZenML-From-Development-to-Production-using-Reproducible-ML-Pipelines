@@ -87,3 +87,21 @@ def load_data():
     return df
 ```
 
+---
+
+#### <ins>2. Pipeline</ins>
+
+A pipeline connects steps into a reproducible workflow.
+
+```python
+from zenml import pipeline
+
+@pipeline
+def training_pipeline():
+    data = load_data()
+    clean_data = preprocess(data)
+    model = train_model(clean_data)
+    metrics = evaluate_model(model, clean_data)
+
+```
+
