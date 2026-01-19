@@ -308,3 +308,30 @@ with mlflow.start_run():
   
 ```
 
+##### Example Stacks
+
+<ins>Local Dev Stack</ins>
+
+- Local orchestrator
+
+- Local filesystem
+
+- SQLite tracking
+
+- Production Stack
+
+<ins>Kubernetes</ins>
+
+- S3 artifact store
+
+- MLflow tracking
+
+- Docker images
+
+##### Switch stacks instantly:
+
+```python
+zenml stack set production
+
+```
+
