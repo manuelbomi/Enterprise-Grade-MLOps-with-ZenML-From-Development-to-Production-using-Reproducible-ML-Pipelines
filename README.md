@@ -275,3 +275,36 @@ with mlflow.start_run():
 - For McDonald's scale, **ZenML is recommended** for production
 - Consider **hybrid approach** using both platforms
 
+##### MLflow alone ≠ MLOps
+
+##### ZenML orchestrates MLflow and more
+
+
+---
+
+### ZenML Stacks
+
+##### What is a Stack?
+
+##### A stack defines where and how our pipeline runs.
+
+```python
+┌──────────────────────────────┐
+│        ZenML Pipeline        │
+│  load → train → evaluate     │
+└─────────────┬────────────────┘
+              │
+        ┌─────▼─────┐
+        │   STACK   │
+        └─────┬─────┘
+              │
+┌─────────────┼──────────────────────────┐
+│ Orchestrator│ Kubeflow / Airflow        │
+│ Artifacts   │ S3 / GCS / Local FS       │
+│ Tracker     │ MLflow / W&B              │
+│ Containers  │ Docker                    │
+│ Deployment  │ KServe / Seldon / Custom  │
+└─────────────┴──────────────────────────┘
+
+```
+
