@@ -209,9 +209,38 @@ With ZenML, the same pipeline can run on:
 ### ZenML vs MLflow
 
 
-MLflow = experiment tracking
+- MLflow = experiment tracking
 
-ZenML = full MLOps framework
+- ZenML = full MLOps framework
 
-ZenML can use MLflow internally
+- ZenML can use MLflow internally
+
+MLflow example (manual tracking)
+
+```python
+import mlflow
+
+with mlflow.start_run():
+    mlflow.log_param("lr", 0.01)
+    mlflow.log_metric("accuracy", 0.92)
+    mlflow.sklearn.log_model(model, "model")
+```
+
+##### MLflow answers:
+
+*“Which experiment performed best?”*
+
+##### ZenML answers bigger questions:
+
+- How was the model trained?
+
+- Which data produced it?
+
+- Can I reproduce it?
+
+- Can I deploy it automatically?
+
+- Can CI/CD run it?
+
+- #### Comparison Table
 
