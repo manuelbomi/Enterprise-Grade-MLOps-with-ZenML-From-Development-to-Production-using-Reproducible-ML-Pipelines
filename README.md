@@ -46,7 +46,7 @@ save(model)
 
 This works once, on your laptop, for experiments.
 
-##### But in real systems, you need to answer:
+##### But in real systems, we need to answer:
 
 - Which exact data produced this model?
 
@@ -126,7 +126,92 @@ training_pipeline()
 
 - Artifacts (models, datasets, metrics)
 
-You can always answer:
+We can always answer:
 
 **“How was this model produced?"**
+
+##### <ins>2. Artifact Tracking</ins>
+
+##### Outputs are not just Python variables — they are versioned artifacts.
+
+Examples:
+
+- Dataset artifact
+
+- Model artifact
+
+- Metrics artifact
+
+Instead of:
+
+```python
+model.pkl
+
+```
+
+We get:
+
+```python
+Model v17 — Pipeline run 2024-10-12_14-32
+```
+
+##### <ins>3. Infrastructure Abstraction</ins>
+
+##### Our pipeline code never changes, but where it runs does.
+
+```python
+zenml stack set local
+zenml stack set production
+```
+
+With ZenML, the same pipeline can run on:
+
+- Local machine
+
+- Docker
+
+- Kubernetes
+
+- Cloud (AWS, GCP, Azure)
+
+##### <ins>4.  Clear Separation of Concerns </ins>
+
+## MLOps Team Responsibilities
+
+| Responsibility | Owner | Key Activities |
+|----------------|-------|----------------|
+| **Model logic** | ML Engineer | • Algorithm development<br>• Model training & optimization<br>• Performance tuning |
+| **Data handling** | Data Engineer | • Data pipeline development<br>• Feature engineering<br>• Data quality assurance |
+| **Infrastructure** | Platform / DevOps Engineer | • Cloud infrastructure<br>• CI/CD pipelines<br>• Monitoring & scaling |
+| **Experiment tracking** | MLOps Engineer | • Experiment versioning<br>• Model registry management<br>• Performance tracking |
+
+
+## MLOps Responsibility Matrix (RACI)
+
+| Responsibility | R (Responsible) | A (Accountable) | C (Consulted) | I (Informed) |
+|----------------|-----------------|-----------------|---------------|--------------|
+| **Model Development** | ML Engineer | Lead ML Engineer | Data Scientist | Product Manager |
+| **Data Pipeline** | Data Engineer | Lead Data Engineer | ML Engineer | MLOps Engineer |
+| **Infrastructure** | DevOps Engineer | Platform Lead | Security Team | All Engineering Teams |
+| **Experiment Tracking** | MLOps Engineer | ML Lead | Data Scientist | Stakeholders |
+| **Model Deployment** | MLOps Engineer | DevOps Lead | ML Engineer | Business Teams |
+| **Monitoring & Maintenance** | MLOps Engineer | Platform Lead | ML Engineer | Support Teams |
+
+
+
+
+
+
+##### ZenML enforces this separation by design.
+
+---
+
+### ZenML vs MLflow
+
+
+MLflow = experiment tracking
+
+ZenML = full MLOps framework
+
+ZenML can use MLflow internally
 
