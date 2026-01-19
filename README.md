@@ -59,3 +59,22 @@ This works once, on your laptop, for experiments.
 - How does CI/CD retrain and redeploy models?
 
 **These problems define MLOps.**
+
+---
+
+### Core ZenML Concepts
+#### <ins>1. Step</ins>
+
+##### A step is a single logical unit of work.
+
+Examples:
+
+- Load data
+
+- Clean data
+
+- Train model
+
+- Evaluate model
+
+- Deploy model
