@@ -244,7 +244,7 @@ with mlflow.start_run():
 
 #### Comparison Table
 
-## MLOps Platform Comparison: MLflow vs ZenML
+#### MLOps Platform Comparison: MLflow vs ZenML
 
 | Feature | MLflow | ZenML | Notes |
 |---------|--------|-------|-------|
@@ -256,7 +256,7 @@ with mlflow.start_run():
 | **CI/CD support** | ❌ Basic | ✅ Native | ZenML designed for CI/CD pipelines from the start |
 | **Production workflows** | ⚠️ Weak | ✅ Strong | ZenML focuses on production ML; MLflow more experimental |
 
-## MLOps Platform Feature Comparison
+#### MLOps Platform Feature Comparison
 
 | Feature | MLflow | ZenML | Winner | Importance |
 |---------|--------|-------|--------|------------|
