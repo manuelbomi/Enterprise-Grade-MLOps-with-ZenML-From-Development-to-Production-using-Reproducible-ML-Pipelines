@@ -128,5 +128,5 @@ training_pipeline()
 
 You can always answer:
 
-*“How was this model produced?”
+**“How was this model produced?”*
 
