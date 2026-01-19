@@ -318,9 +318,9 @@ with mlflow.start_run():
 
 - SQLite tracking
 
-- Production Stack
+<ins>Production Stack</ins>
 
-<ins>Kubernetes</ins>
+- Kubernetes<
 
 - S3 artifact store
 
@@ -334,4 +334,75 @@ with mlflow.start_run():
 zenml stack set production
 
 ```
+
+---
+
+### End-to-End Example (Train → Evaluate → Deploy)
+
+##### Step Definitions
+
+```python
+@step
+def train_model(df):
+    return model
+
+@step
+def evaluate_model(model, df):
+    return accuracy
+
+@step
+def deploy_model(model, accuracy: float):
+    if accuracy > 0.9:
+        deploy(model)
+
+```
+
+##### Pipeline
+
+```python
+@pipeline
+def training_pipeline():
+    df = load_data()
+    clean_df = clean_data(df)
+    model = train_model(clean_df)
+    acc = evaluate_model(model, clean_df)
+    deploy_model(model, acc)
+
+```
+
+**Deployment becomes part of the pipeline, not an afterthought.**
+
+---
+
+### ZenML in CI/CD (Real Enterprise MLOps)
+
+<ins>GitHub Actions Example</ins>
+
+```python
+name: Train and Deploy Model
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run ZenML pipeline
+        run: python run_pipeline.py
+```
+
+---
+
+### What ZenML gives CI/CD automatically
+
+- Reproducible runs
+- Versioned models
+-  Environment isolation
+-  Conditional deployment
+-  Traceability for audits
 
