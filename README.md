@@ -105,3 +105,9 @@ def training_pipeline():
 
 ```
 
+##### Running the pipeline:
+
+```python
+training_pipeline()
+```
+
