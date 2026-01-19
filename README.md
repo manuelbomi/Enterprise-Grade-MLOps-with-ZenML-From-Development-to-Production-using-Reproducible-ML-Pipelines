@@ -242,5 +242,36 @@ with mlflow.start_run():
 
 - Can CI/CD run it?
 
-- #### Comparison Table
+#### Comparison Table
+
+## MLOps Platform Comparison: MLflow vs ZenML
+
+| Feature | MLflow | ZenML | Notes |
+|---------|--------|-------|-------|
+| **Experiment tracking** | ✅ Native | ✅ (via integration) | Both support experiment tracking, but MLflow has more mature native capabilities |
+| **Pipeline orchestration** | ❌ Not supported | ✅ Native | ZenML has built-in pipeline orchestration; MLflow requires external tools |
+| **Data lineage** | ❌ Limited | ✅ Native | ZenML tracks data artifacts and transformations natively |
+| **Reproducibility** | ⚠️ Partial | ✅ Strong | ZenML's containerized steps ensure better reproducibility |
+| **Infrastructure abstraction** | ❌ None | ✅ Native | ZenML abstracts infrastructure; MLflow requires manual setup |
+| **CI/CD support** | ❌ Basic | ✅ Native | ZenML designed for CI/CD pipelines from the start |
+| **Production workflows** | ⚠️ Weak | ✅ Strong | ZenML focuses on production ML; MLflow more experimental |
+
+## MLOps Platform Feature Comparison
+
+| Feature | MLflow | ZenML | Winner | Importance |
+|---------|--------|-------|--------|------------|
+| **Experiment Tracking** | ⭐⭐⭐⭐⭐ (5/5) | ⭐⭐⭐⭐ (4/5) | MLflow | High |
+| **Pipeline Orchestration** | ⭐ (1/5) | ⭐⭐⭐⭐⭐ (5/5) | ZenML | High |
+| **Data Lineage** | ⭐⭐ (2/5) | ⭐⭐⭐⭐⭐ (5/5) | ZenML | Critical |
+| **Reproducibility** | ⭐⭐⭐ (3/5) | ⭐⭐⭐⭐⭐ (5/5) | ZenML | High |
+| **Infrastructure Abstraction** | ⭐ (1/5) | ⭐⭐⭐⭐⭐ (5/5) | ZenML | Medium |
+| **CI/CD Support** | ⭐⭐ (2/5) | ⭐⭐⭐⭐⭐ (5/5) | ZenML | High |
+| **Production Workflows** | ⭐⭐ (2/5) | ⭐⭐⭐⭐⭐ (5/5) | ZenML | Critical |
+| **Total Score** | **16/35** | **34/35** | **ZenML** | |
+
+**Key Insights:**
+- MLflow wins for **experimentation and research**
+- ZenML wins for **production and scalability**
+- For McDonald's scale, **ZenML is recommended** for production
+- Consider **hybrid approach** using both platforms
 
