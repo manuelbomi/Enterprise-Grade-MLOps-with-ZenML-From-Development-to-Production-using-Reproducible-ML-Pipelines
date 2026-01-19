@@ -30,3 +30,16 @@
 <ins>One-sentence definition</ins>
 
 *ZenML is an MLOps framework that turns ML code into versioned, reproducible, deployable pipelines that can run consistently across development and production environments.*
+
+---
+
+### The MLOps Problem (Before ZenML)
+
+##### Typical ML code:
+
+```python
+data = load_data()
+model = train(data)
+accuracy = evaluate(model)
+save(model)
+```
