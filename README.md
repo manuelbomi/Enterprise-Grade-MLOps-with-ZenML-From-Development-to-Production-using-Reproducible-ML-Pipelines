@@ -298,13 +298,13 @@ with mlflow.start_run():
         │   STACK   │
         └─────┬─────┘
               │
-┌─────────────┼──────────────────────────┐
+┌─────────────┼───────────────────────── ─┐
 │ Orchestrator│ Kubeflow / Airflow        │
 │ Artifacts   │ S3 / GCS / Local FS       │
 │ Tracker     │ MLflow / W&B              │
 │ Containers  │ Docker                    │
 │ Deployment  │ KServe / Seldon / Custom  │
-└─────────────┴──────────────────────────┘
-
+└─────────────┴────────────────────────── ┘
+  
 ```
 
