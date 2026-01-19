@@ -111,3 +111,18 @@ def training_pipeline():
 training_pipeline()
 ```
 
+---
+
+###  What Makes ZenML an MLOps Tool?
+##### <ins>1. Reproducibility</ins>
+
+##### Every pipeline run tracks:
+
+- Code version
+
+- Parameters
+
+- Inputs & outputs
+
+- Artifacts (models, datasets, metrics)
+
