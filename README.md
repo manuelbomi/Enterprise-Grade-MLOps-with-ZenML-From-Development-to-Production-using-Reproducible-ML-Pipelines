@@ -176,7 +176,7 @@ With ZenML, the same pipeline can run on:
 
 ##### <ins>4.  Clear Separation of Concerns </ins>
 
-## MLOps Team Responsibilities
+#### MLOps Team Responsibilities
 
 | Responsibility | Owner | Key Activities |
 |----------------|-------|----------------|
@@ -186,7 +186,7 @@ With ZenML, the same pipeline can run on:
 | **Experiment tracking** | MLOps Engineer | • Experiment versioning<br>• Model registry management<br>• Performance tracking |
 
 
-## MLOps Responsibility Matrix (RACI)
+#### MLOps Responsibility Matrix (RACI)
 
 | Responsibility | R (Responsible) | A (Accountable) | C (Consulted) | I (Informed) |
 |----------------|-----------------|-----------------|---------------|--------------|
