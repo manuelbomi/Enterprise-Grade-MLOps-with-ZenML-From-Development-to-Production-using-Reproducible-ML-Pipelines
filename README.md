@@ -126,3 +126,7 @@ training_pipeline()
 
 - Artifacts (models, datasets, metrics)
 
+You can always answer:
+
+*“How was this model produced?”
+
