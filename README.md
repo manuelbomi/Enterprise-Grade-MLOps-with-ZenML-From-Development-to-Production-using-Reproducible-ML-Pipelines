@@ -78,3 +78,12 @@ Examples:
 - Evaluate model
 
 - Deploy model
+
+from zenml import step
+
+```python
+@step
+def load_data():
+    return df
+```
+
