@@ -320,7 +320,7 @@ with mlflow.start_run():
 
 <ins>Production Stack</ins>
 
-- Kubernetes<
+- Kubernetes
 
 - S3 artifact store
 
