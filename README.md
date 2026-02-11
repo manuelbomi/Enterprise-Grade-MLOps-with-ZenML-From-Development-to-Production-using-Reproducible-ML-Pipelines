@@ -272,7 +272,6 @@ with mlflow.start_run():
 **Key Insights:**
 - MLflow wins for **experimentation and research**
 - ZenML wins for **production and scalability**
-- For McDonald's scale, **ZenML is recommended** for production
 - Consider **hybrid approach** using both platforms
 
 ##### MLflow alone ≠ MLOps
